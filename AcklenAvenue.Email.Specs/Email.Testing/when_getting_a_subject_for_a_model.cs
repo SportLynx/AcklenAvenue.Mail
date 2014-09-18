@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using AcklenAvenue.Email.Email;
 using Machine.Specifications;
 using Moq;
 using It = Machine.Specifications.It;

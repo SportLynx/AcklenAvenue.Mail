@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AcklenAvenue.Email.Email
+namespace AcklenAvenue.Email
 {
     public class EmailSubjectRenderer : IEmailSubjectRenderer
     {

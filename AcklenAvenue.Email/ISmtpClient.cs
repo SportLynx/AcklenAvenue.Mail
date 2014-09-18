@@ -1,4 +1,4 @@
-namespace AcklenAvenue.Email.Email
+namespace AcklenAvenue.Email
 {
     public interface ISmtpClient
     {
