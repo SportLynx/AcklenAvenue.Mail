@@ -1,0 +1,12 @@
+C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\bin\Debug\AcklenAvenue.Email.Specs.dll
+C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\bin\Debug\AcklenAvenue.Email.Specs.pdb
+C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\bin\Debug\AcklenAvenue.Email.dll
+C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\bin\Debug\Machine.Specifications.Clr4.dll
+C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\bin\Debug\Machine.Specifications.dll
+C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\bin\Debug\Machine.Specifications.Should.dll
+C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\bin\Debug\Moq.dll
+C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\bin\Debug\AcklenAvenue.Email.pdb
+C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\bin\Debug\Moq.xml
+C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\obj\Debug\AcklenAvenue.Email.Specs.csprojResolveAssemblyReference.cache
+C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\obj\Debug\AcklenAvenue.Email.Specs.dll
+C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\obj\Debug\AcklenAvenue.Email.Specs.pdb
