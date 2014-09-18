@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcklenAvenue.Email", "Ackle
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcklenAvenue.Email.Specs", "AcklenAvenue.Email.Specs\AcklenAvenue.Email.Specs.csproj", "{C9B9D373-9309-4ADB-8278-51F588DF802D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplicationTest", "ConsoleApplicationTest\ConsoleApplicationTest.csproj", "{1C9C3A49-5CC9-4125-BBA0-10051D1D3828}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{C9B9D373-9309-4ADB-8278-51F588DF802D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9B9D373-9309-4ADB-8278-51F588DF802D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9B9D373-9309-4ADB-8278-51F588DF802D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1C9C3A49-5CC9-4125-BBA0-10051D1D3828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C9C3A49-5CC9-4125-BBA0-10051D1D3828}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C9C3A49-5CC9-4125-BBA0-10051D1D3828}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C9C3A49-5CC9-4125-BBA0-10051D1D3828}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
