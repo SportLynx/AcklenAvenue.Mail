@@ -3,3 +3,8 @@ C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email\bin\Debug\AcklenAvenue.Email.pdb
 C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email\obj\Debug\AcklenAvenue.Email.csprojResolveAssemblyReference.cache
 C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email\obj\Debug\AcklenAvenue.Email.dll
 C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email\obj\Debug\AcklenAvenue.Email.pdb
+C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email\bin\Debug\AcklenAvenue.Email.dll
+C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email\bin\Debug\AcklenAvenue.Email.pdb
+C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email\obj\Debug\AcklenAvenue.Email.csprojResolveAssemblyReference.cache
+C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email\obj\Debug\AcklenAvenue.Email.dll
+C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email\obj\Debug\AcklenAvenue.Email.pdb

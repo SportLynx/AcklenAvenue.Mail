@@ -7,10 +7,12 @@ namespace AcklenAvenue.Email
     public class EmailSubjectRenderer : IEmailSubjectRenderer
     {
         readonly IEnumerable<IEmailSubjectTemplate> _emailSubjects;
+        readonly IViewEngine _viewEngine;
 
-        public EmailSubjectRenderer(IEnumerable<IEmailSubjectTemplate> emailSubjects)
+        public EmailSubjectRenderer(IEnumerable<IEmailSubjectTemplate> emailSubjects, IViewEngine viewEngine)
         {
             _emailSubjects = emailSubjects;
+            _viewEngine = viewEngine;
         }
 
         public string Render<T>(T model)
@@ -20,7 +22,9 @@ namespace AcklenAvenue.Email
             if (subjectTemplate == null)
                 throw new Exception(string.Format("No email subject exists for model type '{0}'.", model.GetType()));
 
-            return subjectTemplate.SubjectTemplate;
+            var subject = _viewEngine.Render(model, subjectTemplate.SubjectTemplate);
+
+            return subject;
         }
     }
 }
