@@ -19,5 +19,13 @@ namespace AcklenAvenue.Email
             string body = _emailBodyRenderer.Render(model);
             _smtpClient.Send(emailAddress, subject, body);
         }
+
+
+        public void Send<T>(string replyToAddress, string replyToName, string fromAddress, string fromName, string recipientList, T model)
+        {
+            string subject = _emailSubjectRenderer.Render(model);
+            string body = _emailBodyRenderer.Render(model);
+            _smtpClient.Send(replyToAddress, replyToName, fromAddress, fromName, recipientList, subject, body);
+        }
     }
 }
