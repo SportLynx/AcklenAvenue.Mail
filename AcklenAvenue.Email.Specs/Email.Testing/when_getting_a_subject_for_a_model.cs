@@ -12,12 +12,14 @@ namespace AcklenAvenue.Email.Specs.Email.Testing
         static TestModel _model;
         static string _result;
         static IEmailSubjectTemplate _subjectTemplate;
+        static IViewEngine _viewEngine;
 
         Establish context =
             () =>
             {
+                _viewEngine = Mock.Of<IViewEngine>();
                 _subjectTemplate = Mock.Of<IEmailSubjectTemplate>();
-                _subjectRenderer = new EmailSubjectRenderer(new List<IEmailSubjectTemplate> { _subjectTemplate });
+                _subjectRenderer = new EmailSubjectRenderer(new List<IEmailSubjectTemplate> { _subjectTemplate }, _viewEngine);
 
                 _model = new TestModel();
 

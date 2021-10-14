@@ -10,7 +10,8 @@ namespace AcklenAvenue.Email.Specs.Email.Testing
         const string EmailBody = "email body";
         const string Subject = "Account Verification";
         static IEmailSender _emailSender;
-        static IEmailBodyRenderer _emailBodyRenderer;
+        static IEmailBodyHtmlRenderer _emailBodyHtmlRenderer;
+        static IEmailBodyPlainTextRenderer _emailBodyPlainTextRenderer;
         static TestModel _model;
         static ISmtpClient _smtpClient;
         static IEmailSubjectRenderer _emailSubjectRenderer;
@@ -18,14 +19,15 @@ namespace AcklenAvenue.Email.Specs.Email.Testing
         Establish context =
             () =>
             {
-                _emailBodyRenderer = Mock.Of<IEmailBodyRenderer>();
+                _emailBodyHtmlRenderer = Mock.Of<IEmailBodyHtmlRenderer>();
+                _emailBodyPlainTextRenderer = Mock.Of<IEmailBodyPlainTextRenderer>();
                 _smtpClient = Mock.Of<ISmtpClient>();
                 _emailSubjectRenderer = Mock.Of<IEmailSubjectRenderer>();
-                _emailSender = new EmailSender(_emailBodyRenderer, _emailSubjectRenderer, _smtpClient);
+                _emailSender = new EmailSender(_emailBodyHtmlRenderer, _emailBodyPlainTextRenderer, _emailSubjectRenderer, _smtpClient);
 
                 _model = new TestModel();
 
-                Mock.Get(_emailBodyRenderer).Setup(x => x.Render(_model)).Returns(EmailBody);
+                Mock.Get(_emailBodyHtmlRenderer).Setup(x => x.Render(_model)).Returns(EmailBody);
 
                 Mock.Get(_emailSubjectRenderer).Setup(x => x.Render(_model)).Returns(Subject);
             };

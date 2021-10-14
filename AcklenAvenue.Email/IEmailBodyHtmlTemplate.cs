@@ -2,9 +2,9 @@ using System;
 
 namespace AcklenAvenue.Email
 {
-    public interface IEmailBodyTemplate
+    public interface IEmailBodyHtmlTemplate
     {
         Type ForType { get; }
-        string BodyTemplate { get; }
+        string BodyHtmlTemplate { get; }
     }
 }

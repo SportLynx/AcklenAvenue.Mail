@@ -1,6 +1,6 @@
 namespace AcklenAvenue.Email
 {
-    public interface IEmailBodyRenderer
+    public interface IEmailBodyHtmlRenderer
     {
         string Render<T>(T model);
     }

@@ -1,31 +1,36 @@
+using System.Collections.Generic;
+using System.IO;
+
 namespace AcklenAvenue.Email
 {
     public class EmailSender : IEmailSender
     {
-        readonly IEmailBodyRenderer _emailBodyRenderer;
+        readonly IEmailBodyHtmlRenderer _emailBodyHtmlRenderer;
+        readonly IEmailBodyPlainTextRenderer _emailBodyPlainTextRenderer;
         readonly IEmailSubjectRenderer _emailSubjectRenderer;
         readonly ISmtpClient _smtpClient;
 
-        public EmailSender(IEmailBodyRenderer emailBodyRenderer, IEmailSubjectRenderer emailSubjectRenderer, ISmtpClient smtpClient)
+        public EmailSender(IEmailBodyHtmlRenderer emailBodyHtmlRenderer, IEmailBodyPlainTextRenderer emailBodyPlainTextRenderer, IEmailSubjectRenderer emailSubjectRenderer, ISmtpClient smtpClient)
         {
-            _emailBodyRenderer = emailBodyRenderer;
+            _emailBodyHtmlRenderer = emailBodyHtmlRenderer;
+            _emailBodyPlainTextRenderer = emailBodyPlainTextRenderer;
             _emailSubjectRenderer = emailSubjectRenderer;
             _smtpClient = smtpClient;
         }
 
         public void Send<T>(string emailAddress, T model)
         {
-            string subject = _emailSubjectRenderer.Render(model);
-            string body = _emailBodyRenderer.Render(model);
+            var subject = _emailSubjectRenderer.Render(model);
+            var body = _emailBodyHtmlRenderer.Render(model);
             _smtpClient.Send(emailAddress, subject, body);
         }
 
-
-        public void Send<T>(string replyToAddress, string replyToName, string fromAddress, string fromName, string recipientList, T model)
+        public void Send<T>(string replyToAddress, string replyToName, string fromAddress, string fromName, string recipientToList, string recipientCcList, string recipientBccList, T model, Dictionary<string, MemoryStream> attachments, Dictionary<string, string> headers, string smtpUsername = null, string smtpPassword = null)
         {
-            string subject = _emailSubjectRenderer.Render(model);
-            string body = _emailBodyRenderer.Render(model);
-            _smtpClient.Send(replyToAddress, replyToName, fromAddress, fromName, recipientList, subject, body);
+            var subject = _emailSubjectRenderer.Render(model);
+            var bodyHtml = _emailBodyHtmlRenderer.Render(model);
+            var bodyPlainText = _emailBodyPlainTextRenderer.Render(model);
+            _smtpClient.Send(replyToAddress, replyToName, fromAddress, fromName, recipientToList, recipientCcList, recipientBccList, subject, bodyHtml, bodyPlainText, attachments, headers, smtpUsername, smtpPassword);
         }
     }
 }

@@ -1,6 +1,6 @@
 namespace AcklenAvenue.Email
 {
-    public interface IEmailTemplateProvider
+    public interface IEmailPlainTextTemplateProvider
     {
         string GetTemplateFor<T>(T model);
     }

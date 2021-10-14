@@ -39,16 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmailBodyRenderer.cs" />
+    <Compile Include="EmailBodyPlainTextRenderer.cs" />
+    <Compile Include="EmailBodyHtmlRenderer.cs" />
+    <Compile Include="EmailPlainTextTemplateProvider.cs" />
     <Compile Include="EmailSender.cs" />
     <Compile Include="EmailSubjectRenderer.cs" />
-    <Compile Include="EmailTemplateProvider.cs" />
-    <Compile Include="IEmailBodyRenderer.cs" />
-    <Compile Include="IEmailBodyTemplate.cs" />
+    <Compile Include="EmailHtmlTemplateProvider.cs" />
+    <Compile Include="IEmailBodyPlainTextRenderer.cs" />
+    <Compile Include="IEmailBodyPlainTextTemplate.cs" />
+    <Compile Include="IEmailBodyHtmlRenderer.cs" />
+    <Compile Include="IEmailBodyHtmlTemplate.cs" />
+    <Compile Include="IEmailPlainTextTemplateProvider.cs" />
     <Compile Include="IEmailSender.cs" />
     <Compile Include="IEmailSubjectRenderer.cs" />
     <Compile Include="IEmailSubjectTemplate.cs" />
-    <Compile Include="IEmailTemplateProvider.cs" />
+    <Compile Include="IEmailHtmlTemplateProvider.cs" />
     <Compile Include="ISmtpClient.cs" />
     <Compile Include="IViewEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

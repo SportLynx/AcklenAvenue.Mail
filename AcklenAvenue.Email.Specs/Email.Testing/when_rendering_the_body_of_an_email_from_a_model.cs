@@ -8,22 +8,22 @@ namespace AcklenAvenue.Email.Specs.Email.Testing
     {
         const string Template = "template";
         const string RenderedHtml = "rendered html";
-        static IEmailBodyRenderer _renderer;
+        static IEmailBodyHtmlRenderer _renderer;
         static TestModel _model;
         static string _result;
-        static IEmailTemplateProvider _emailTemplateProvider;
+        static IEmailHtmlTemplateProvider _emailHtmlTemplateProvider;
         static IViewEngine _viewEngine;
 
         Establish context =
             () =>
             {
-                _emailTemplateProvider = Mock.Of<IEmailTemplateProvider>();
+                _emailHtmlTemplateProvider = Mock.Of<IEmailHtmlTemplateProvider>();
                 _viewEngine = Mock.Of<IViewEngine>();
-                _renderer = new EmailBodyRenderer(_emailTemplateProvider, _viewEngine);
+                _renderer = new EmailBodyHtmlRenderer(_emailHtmlTemplateProvider, _viewEngine);
 
                 _model = new TestModel { };
 
-                Mock.Get(_emailTemplateProvider).Setup(x => x.GetTemplateFor(_model)).Returns(Template);
+                Mock.Get(_emailHtmlTemplateProvider).Setup(x => x.GetTemplateFor(_model)).Returns(Template);
 
                 Mock.Get(_viewEngine).Setup(x => x.Render(_model, Template)).Returns(RenderedHtml);
             };
