@@ -10,8 +10,6 @@ C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\bin\Debug\Moq.xml
 C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\obj\Debug\AcklenAvenue.Email.Specs.csprojResolveAssemblyReference.cache
 C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\obj\Debug\AcklenAvenue.Email.Specs.dll
 C:\Acklen\AcklenAvenue.Email\AcklenAvenue.Email.Specs\obj\Debug\AcklenAvenue.Email.Specs.pdb
-C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email.Specs\obj\Debug\AcklenAvenue.Email.Specs.csprojResolveAssemblyReference.cache
-C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email.Specs\obj\Debug\AcklenAvenue.Email.Specs.dll
 C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email.Specs\bin\Debug\AcklenAvenue.Email.Specs.dll
 C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email.Specs\bin\Debug\AcklenAvenue.Email.Specs.pdb
 C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email.Specs\bin\Debug\AcklenAvenue.Email.dll
@@ -21,4 +19,8 @@ C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email.Specs\bin\Debug\Machine.Specifi
 C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email.Specs\bin\Debug\Moq.dll
 C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email.Specs\bin\Debug\AcklenAvenue.Email.pdb
 C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email.Specs\bin\Debug\Moq.xml
+C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email.Specs\obj\Debug\AcklenAvenue.Email.Specs.csproj.AssemblyReference.cache
+C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email.Specs\obj\Debug\AcklenAvenue.Email.Specs.csproj.CoreCompileInputs.cache
+C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email.Specs\obj\Debug\AcklenAv.09D7A5DF.Up2Date
+C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email.Specs\obj\Debug\AcklenAvenue.Email.Specs.dll
 C:\Projects\AcklenAvenue.Mail\AcklenAvenue.Email.Specs\obj\Debug\AcklenAvenue.Email.Specs.pdb

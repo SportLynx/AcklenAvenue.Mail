@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AcklenAvenue.Email.Specs</RootNamespace>
     <AssemblyName>AcklenAvenue.Email.Specs</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -55,6 +55,7 @@
     <Compile Include="Email.Testing\when_getting_a_subject_for_a_model.cs" />
     <Compile Include="Email.Testing\when_providing_a_template_from_a_model.cs" />
     <Compile Include="Email.Testing\when_rendering_the_body_of_an_email_from_a_model.cs" />
+    <Compile Include="Email.Testing\when_retrying_smtp_timeouts.cs" />
     <Compile Include="Email.Testing\when_sending_an_email.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

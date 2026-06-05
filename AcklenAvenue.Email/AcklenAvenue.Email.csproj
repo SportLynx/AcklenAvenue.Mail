@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AcklenAvenue.Email</RootNamespace>
     <AssemblyName>AcklenAvenue.Email</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -39,9 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmailAddress.cs" />
+    <Compile Include="EmailAttachment.cs" />
     <Compile Include="EmailBodyPlainTextRenderer.cs" />
     <Compile Include="EmailBodyHtmlRenderer.cs" />
     <Compile Include="EmailPlainTextTemplateProvider.cs" />
+    <Compile Include="EmailMessage.cs" />
     <Compile Include="EmailSender.cs" />
     <Compile Include="EmailSubjectRenderer.cs" />
     <Compile Include="EmailHtmlTemplateProvider.cs" />
@@ -54,7 +57,7 @@
     <Compile Include="IEmailSubjectRenderer.cs" />
     <Compile Include="IEmailSubjectTemplate.cs" />
     <Compile Include="IEmailHtmlTemplateProvider.cs" />
-    <Compile Include="ISmtpClient.cs" />
+    <Compile Include="IEmailClient.cs" />
     <Compile Include="IViewEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

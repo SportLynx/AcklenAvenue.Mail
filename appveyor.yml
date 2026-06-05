@@ -1,0 +1,31 @@
+version: 1.0.{build}
+
+image: Visual Studio 2022
+
+platform: Any CPU
+configuration: Release
+
+skip_branch_with_pr: true
+
+cache:
+  - packages -> **\packages.config
+
+nuget:
+  account_feed: true
+  project_feed: true
+  disable_publish_on_pr: true
+
+build:
+  project: AcklenAvenue.Email.sln
+  publish_nuget: false
+  verbosity: minimal
+
+before_build:
+  - nuget restore AcklenAvenue.Email.sln
+
+test: off
+
+after_build:
+  - if not exist artifacts md artifacts
+  - nuget pack AcklenAvenue.Email\AcklenAvenue.Email.csproj -Properties Configuration=%CONFIGURATION% -Version %APPVEYOR_BUILD_VERSION% -OutputDirectory artifacts
+  - appveyor PushArtifact artifacts\Acklen.Mail.%APPVEYOR_BUILD_VERSION%.nupkg
