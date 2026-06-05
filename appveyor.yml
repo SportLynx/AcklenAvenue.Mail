@@ -15,13 +15,13 @@ nuget:
   project_feed: true
   disable_publish_on_pr: true
 
-build:
-  project: AcklenAvenue.Email.sln
-  publish_nuget: false
-  verbosity: minimal
+build: off
 
 before_build:
   - nuget restore AcklenAvenue.Email.sln
+
+build_script:
+  - ps: $msbuild = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -requires Microsoft.Component.MSBuild -find MSBuild\**\Bin\MSBuild.exe | Select-Object -First 1; if (-not $msbuild) { throw "MSBuild not found via vswhere." }; & $msbuild "AcklenAvenue.Email.sln" "/verbosity:minimal" "/p:Configuration=$env:CONFIGURATION" "/p:Platform=Any CPU"; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 test: off
 
