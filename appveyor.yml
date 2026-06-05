@@ -27,5 +27,5 @@ test: off
 
 after_build:
   - if not exist artifacts md artifacts
-  - nuget pack AcklenAvenue.Email\AcklenAvenue.Email.csproj -Properties Configuration=%CONFIGURATION% -Version %APPVEYOR_BUILD_VERSION% -OutputDirectory artifacts
+  - nuget pack AcklenAvenue.Email\AcklenAvenue.Email.csproj -Properties "Configuration=%CONFIGURATION%;Platform=AnyCPU;OutDir=%APPVEYOR_BUILD_FOLDER%\AcklenAvenue.Email\bin\%CONFIGURATION%\\" -Version %APPVEYOR_BUILD_VERSION% -OutputDirectory artifacts
   - appveyor PushArtifact artifacts\Acklen.Mail.%APPVEYOR_BUILD_VERSION%.nupkg
